@@ -1,1 +1,16 @@
-<p>hockey works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 offset-md-4 d-flex justify-content-center my-4">
+            <button class="btn btn-success">All shots</button>
+        </div>
+        <div class="col-md-2 d-flex justify-content-center my-4">
+            <button class="btn btn-danger">Goals</button>
+        </div>
+        <div class="playground col-md-12">
+            <div class="bcg">
+                <div class="dot" *ngFor="let shot of shotsArray" style="top: {{ shot.computedY }}%; left: {{ shot.computedX }}%;" title="{{ shot.x }} : {{ shot.y }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

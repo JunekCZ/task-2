@@ -1,0 +1,24 @@
+button {
+    width: 100%;
+}
+
+.playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bcg {
+        width: 760px;
+        height: auto;
+        min-height: 582px;
+        position: relative;
+        background: url("/assets/images/background-hriste.png") no-repeat;
+        background-size: cover;
+        .dot {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            background-color: #2244AA;
+            border-radius: 6px;
+        }
+    }
+}
