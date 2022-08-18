@@ -1,14 +1,18 @@
 <div class="container">
     <div class="row">
         <div class="col-md-2 offset-md-4 d-flex justify-content-center my-4">
-            <button class="btn btn-success">All shots</button>
+            <button class="btn btn-success" (click)="goalsOnly = false;">All shots</button>
         </div>
         <div class="col-md-2 d-flex justify-content-center my-4">
-            <button class="btn btn-danger">Goals</button>
+            <button class="btn btn-danger" (click)="goalsOnly = true;">Goals</button>
         </div>
         <div class="playground col-md-12">
-            <div class="bcg">
-                <div class="dot" *ngFor="let shot of shotsArray" style="top: {{ shot.computedY }}%; left: {{ shot.computedX }}%;" title="{{ shot.x }} : {{ shot.y }}">
+            <div class="bcg" (click)="hideAllDetails();">
+                <div class="shot" *ngFor="let shot of shotsArray | goalsOnly: goalsOnly" (click)="showDetails(shot);" style="top: {{ shot.computedY }}%; left: {{ shot.computedX }}%;" title="{{ shot.x }} : {{ shot.y }}">
+                    <div class="popup" *ngIf="shot.shown">
+                        <span><strong>Player_id: </strong>{{ shot.player }}</span><br />
+                        <span><strong>xG: </strong>{{ shot.xG }}</span>
+                    </div>
                 </div>
             </div>
         </div>

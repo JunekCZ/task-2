@@ -13,12 +13,27 @@ button {
         position: relative;
         background: url("/assets/images/background-hriste.png") no-repeat;
         background-size: cover;
-        .dot {
+        .shot {
             width: 12px;
             height: 12px;
             position: absolute;
             background-color: #2244AA;
             border-radius: 6px;
+            .popup {
+                position: absolute;
+                width: 500px;
+                height: auto;
+                padding: 15px;
+                background-color: #F2F2F2;
+                border-radius: 4px;
+                top: -56px;
+                left: -250px;
+                z-index: 1;
+                text-align: center;
+                span {
+                    width: 100%;
+                }
+            }
         }
     }
 }

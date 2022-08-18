@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HockeyComponent } from './hockey/hockey.component';
+import { GoalsOnlyPipe } from './pipes/goals-only.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HockeyComponent
+    HockeyComponent,
+    GoalsOnlyPipe
   ],
   imports: [
     BrowserModule,
